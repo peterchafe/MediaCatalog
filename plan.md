@@ -1,5 +1,3 @@
-Certainly! Here's the updated Markdown file incorporating the use of the TMDB API key and ensuring proper attribution:
-
 ### Plan Overview
 
 1. **Setup Development Environment**
