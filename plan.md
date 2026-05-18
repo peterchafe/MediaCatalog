@@ -193,3 +193,12 @@
 - **Attribution**: When developing and distributing your MediaCatalog application online, make sure to include proper attribution for any third-party APIs used, such as the TMDB API.
 
 By following this plan, you can develop your MediaCatalog application incrementally while ensuring proper attribution for using the TMDB API.
+
+## Completed Steps
+
+### Step 1: Setup Development Environment
+
+- Installed the latest version of .NET SDK.
+- Set up Visual Studio Code or another C# development environment, including necessary extensions (e.g., "C#" by Microsoft).
+- Created a new .NET Core console application project named MediaCatalog.
+- Used the command line to create and navigate into the project directory.
