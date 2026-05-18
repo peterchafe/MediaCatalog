@@ -210,3 +210,10 @@ By following this plan, you can develop your MediaCatalog application incrementa
 - Implement MovieContext for database configuration
 - Register DbContext in Program.cs
 - Add initial migration and database creation logic
+
+### 3. Movie Class and Repository
+
+- Define Movie entity with core properties (Title, Genre, ReleaseDate, etc.)
+- Create IMovieRepository interface and MovieRepository implementation
+- Register DbContext and Repository in DI container
+- Add Swashbuckle setup for API documentation

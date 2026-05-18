@@ -2,13 +2,21 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using MediaCatalog.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers(); // Add MVC controllers
+builder.Services.AddEndpointsApiExplorer(); // For API documentation (Swagger)
+builder.Services.AddSwaggerGen(); // Add Swagger for API documentation
+
 // Register DbContext and SQLite
 builder.Services.AddDbContext<MovieContext>(options =>
     options.UseSqlite("Data Source=app.db"));
+
+// Register the repository
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
 // Register controllers (if using minimal APIs, you might skip this, but for MVC controllers:
 builder.Services.AddControllers();
@@ -23,6 +31,8 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
