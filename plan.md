@@ -202,3 +202,11 @@ By following this plan, you can develop your MediaCatalog application incrementa
 - Set up Visual Studio Code or another C# development environment, including necessary extensions (e.g., "C#" by Microsoft).
 - Created a new .NET Core console application project named MediaCatalog.
 - Used the command line to create and navigate into the project directory.
+
+### Step 2: Database Setup: SQLite
+
+- Add EF Core SQLite dependencies to project
+- Create Movie entity model with required properties
+- Implement MovieContext for database configuration
+- Register DbContext in Program.cs
+- Add initial migration and database creation logic
